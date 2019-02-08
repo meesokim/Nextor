@@ -818,6 +818,11 @@ DRV_DIRECT4:
 ;     C = LUN index
 
 DRV_CONFIG:
+    ld a,1
+    ret
+
+    if 0
+
     dec a
     jr z,DRV_CONFIG_1
     dec a
@@ -838,6 +843,8 @@ DRV_CONFIG_2:
     ld a,1
     ret
     
+    endif
+
 
 ;=====
 ;=====  BEGIN of DEVICE-BASED specific routines
